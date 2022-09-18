@@ -10,18 +10,15 @@ Console.WriteLine("give me number2");
 int number2=Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("give me number3");
 int number3=Convert.ToInt32(Console.ReadLine());
+int     max=number1;
 
-if (number1>=number2)
+if (max<number2)
     {
-    if (number1>=number3)
-        Console.WriteLine($"max number={number1}, midle number={number3}, min number={number2}");
-    else 
-        Console.WriteLine($"max number={number3}, midle number={number1}, min number={number2} ");
+        max=number2;
     }
-else
+if (max<number3)
     {
-    if (number2>=number3)
-        Console.WriteLine($"max number={number2}, midle number={number3}, min number={number1}");
-    else 
-        Console.WriteLine($"max number={number3}, midle number={number2}, min number={number1}");
-    }
+        max=number3;
+    }  
+     Console.WriteLine($"max number={max}");
+    
